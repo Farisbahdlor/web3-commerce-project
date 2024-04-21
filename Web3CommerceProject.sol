@@ -32,7 +32,7 @@ contract web3Commerce {
         uint storeCounter;
     }
     //User data mapping base on user address
-    mapping (address => User) public userDB;
+    mapping (address => User) private userDB;
     //Registered user list
     address [] public userList;
 
@@ -49,7 +49,7 @@ contract web3Commerce {
         uint productCounter;
     }
     //Store data mapping base on user address
-    mapping (address => Store []) public storeDB;
+    mapping (address => Store []) private storeDB;
 
     //Category Data List
     struct Category {
@@ -57,7 +57,7 @@ contract web3Commerce {
         string categoryName;
     }
     //Category data array base on index
-    Category [] public categoryDB;
+    Category [] private categoryDB;
 
     //Product Data List
     struct Product {
@@ -73,7 +73,7 @@ contract web3Commerce {
         uint256 amountOfSoldCounter;
     }
     //Product data mapping base on storeID
-    mapping (uint256 => Product []) public productDB;
+    mapping (uint256 => Product []) private productDB;
 
     struct Transaction {
         uint256 transactionID;
